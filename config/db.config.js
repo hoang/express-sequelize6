@@ -4,10 +4,10 @@ require('dotenv').config()
 
 module.exports = {
   development: {
-    username: 'sigma_chat',
-    password: 'sigma_chat',
-    database: 'sigma_chat',
-    host: '54.251.176.121',
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
     dialect: 'mariadb',
     timezone: '+07:00',
     dialectOptions: {
@@ -15,10 +15,10 @@ module.exports = {
     }
   },
   production: {
-    username: process.env.DB_PROD_USER,
-    password: process.env.DB_PROD_PASS,
-    database: 'sigma_chat',
-    host: process.env.DB_PROD_HOST,
+    username: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME,
+    host: process.env.DB_HOST,
     dialect: 'mariadb',
     timezone: '+07:00',
     dialectOptions: {
